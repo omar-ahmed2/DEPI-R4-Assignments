@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Form with Validations</title>
+</head>
+<body>
+    <h1>Contact Form</h1>
+
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <div>
+                <label for="fullname">Full Name:</label>
+                <input 
+                    type="text" 
+                    id="fullname" 
+                    name="fullname" 
+                    required 
+                    aria-required="true"
+                    aria-describedby="fullname-help">
+            </div>
+            <br>
+            <div>
+                <label for="email">Email Address:</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                    aria-required="true"
+                    aria-describedby="email-help"
+                    aria-invalid="false">
+            </div>
+            <br>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    required 
+                    pattern="[0-9\-\+\(\)\s]{7,15}"
+                    aria-required="true"
+                    aria-describedby="phone-help"
+                    aria-invalid="false">
+            </div>
+            <br>
+            <div>
+                <label for="birthdate">Date of Birth:</label>
+                <input 
+                    type="date" 
+                    id="birthdate" 
+                    name="birthdate" 
+                    required 
+                    aria-required="true"
+                    aria-describedby="birthdate-help">
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Additional Information</legend>
+
+            <div>
+                <label for="message">Message:</label>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="5" 
+                    cols="40"
+                    required 
+                    aria-required="true"
+                    aria-describedby="message-help"></textarea>
+            </div>
+            <br>
+            <div>
+                <label for="subject">Subject:</label>
+                <input 
+                    type="text" 
+                    id="subject" 
+                    name="subject" 
+                    aria-describedby="subject-help">
+            </div>
+            <br>
+            <div>
+                <label for="country">Country:</label>
+                <select id="country" name="country" required aria-required="true" aria-describedby="country-help">
+                    <option value="">-- Select a country --</option>
+                    <option value="">Egypt</option>
+                    <option value="usa">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="canada">Canada</option>
+                    <option value="australia">Australia</option>
+                </select>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Preferences</legend>
+
+            <div>
+                <input 
+                    type="checkbox" 
+                    id="subscribe" 
+                    name="subscribe"
+                    aria-describedby="subscribe-help">
+                <label for="subscribe">Subscribe to our newsletter</label>
+            </div>
+            <br>
+            <div>
+                <input 
+                    type="radio" 
+                    id="contact-email" 
+                    name="contact-method" 
+                    value="email"
+                    aria-describedby="contact-method-help">
+                <label for="contact-email">Contact me by Email</label>
+            </div>
+            <br>
+            <div>
+                <input 
+                    type="radio" 
+                    id="contact-phone" 
+                    name="contact-method" 
+                    value="phone"
+                    aria-describedby="contact-method-help">
+                <label for="contact-phone">Contact me by Phone</label>
+            </div>
+        </fieldset>
+        <br>
+        <div>
+            <button type="submit">Submit Form</button>
+            <button type="reset">Clear Form</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Dashboard - Manage your account, view analytics, and track transactions.">
+  <title>Dashboard</title>
+</head>
+<body>
+
+  <div>
+    <!-- Sidebar Navigation -->
+    <aside>
+      <nav aria-label="Main navigation">
+        <h2>Navigation</h2>
+
+        <section>
+          <h3>Dashboard</h3>
+          <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#analytics">Analytics</a></li>
+            <li><a href="#reports">Reports</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Manage</h3>
+          <ul>
+            <li><a href="#users">Users</a></li>
+            <li><a href="#settings">Settings</a></li>
+            <li><a href="#permissions">Permissions</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Transactions</h3>
+          <ul>
+            <li><a href="#history">History</a></li>
+            <li><a href="#invoices">Invoices</a></li>
+            <li><a href="#receipts">Receipts</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Help & Support</h3>
+          <ul>
+            <li><a href="#documentation">Documentation</a></li>
+            <li><a href="#support">Support</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+          </ul>
+        </section>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Header -->
+      <header>
+        <h1>Dashboard</h1>
+        <div >
+          <form role="search">
+            <label for="search">Search:</label>
+            <input id="search" type="search" placeholder="Search transactions, users...">
+            <button type="submit">Search</button>
+          </form>
+          <div>
+            <p>Welcome, <strong>Admin User</strong></p>
+            <a href="#logout">Logout</a>
+          </div>
+        </div>
+      </header>
+
+      <div>
+        <!-- Cards Section -->
+        <section>
+          <h2>Key Metrics</h2>
+
+          <article class="card">
+            <h3>Total Users</h3>
+            <p>1,250</p>
+            <p>Active users this month</p>
+          </article>
+
+          <article>
+            <h3>Total Revenue</h3>
+            <p>$45,320</p>
+            <p>Revenue generated</p>
+          </article>
+
+          <article class="card">
+            <h3>Transactions</h3>
+            <p>892</p>
+            <p>Total transactions processed</p>
+          </article>
+
+          <article>
+            <h3>Growth Rate</h3>
+            <p>23%</p>
+            <p>Month-over-month growth</p>
+          </article>
+        </section>
+
+        <div class="main-grid">
+          <!-- Transactions Table -->
+          <section>
+            <h2>Latest Transactions</h2>
+            <table border="1px" width="50%" aria-describedby="transactions-description">
+              <caption>Recent transactions from the past 30 days</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Transaction ID</th>
+                  <th scope="col">User</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#TXN001</td>
+                  <td>John Doe</td>
+                  <td>$250.00</td>
+                  <td>Completed</td>
+                  <td>2025-12-15</td>
+                  <td><a href="#details">View</a></td>
+                </tr>
+                <tr>
+                  <td>#TXN002</td>
+                  <td>Jane Smith</td>
+                  <td>$150.50</td>
+                  <td>Pending</td>
+                  <td>2025-12-15</td>
+                  <td><a href="#details">View</a></td>
+                </tr>
+                <tr>
+                  <td>#TXN003</td>
+                  <td>Mike Johnson</td>
+                  <td>$500.00</td>
+                  <td>Completed</td>
+                  <td>2025-12-14</td>
+                  <td><a href="#details">View</a></td>
+                </tr>
+                <tr>
+                  <td>#TXN004</td>
+                  <td>Sarah Williams</td>
+                  <td>$75.25</td>
+                  <td>Failed</td>
+                  <td>2025-12-14</td>
+                  <td><a href="#details">View</a></td>
+                </tr>
+                <tr>
+                  <td>#TXN005</td>
+                  <td>Tom Brown</td>
+                  <td>$320.00</td>
+                  <td>Completed</td>
+                  <td>2025-12-13</td>
+                  <td><a href="#details">View</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <!-- Notifications Widget -->
+          <aside>
+            <h2>Notifications</h2>
+
+            <article>
+              <h3>System Maintenance</h3>
+              <p>Scheduled maintenance on 2025-12-20 at 02:00 UTC</p>
+              <p>Dec 20, 2:00 AM</p>
+            </article>
+
+            <article>
+              <h3>New User Sign-up</h3>
+              <p>150 new users joined this week</p>
+              <p>Today</p>
+            </article>
+
+            <article>
+              <h3>Payment Alert</h3>
+              <p>Invoice #INV-2025-001 is due on 2025-12-25</p>
+              <p>Dec 25</p>
+            </article>
+
+            <article>
+              <h3>Security Update</h3>
+              <p>A critical security patch is available for your system</p>
+              <o>Today</o>
+            </article>
+          </aside>
+        </div>
+
+        <!-- Additional Sections -->
+        <section>
+          <h2>Recent Activity</h2>
+
+          <article>
+            <h3>User Omar Ahmed logged in</h3>
+            <p>Location: Egypt, Cairo, EGY</p>
+            <p>Today at 14:30</p>
+          </article>
+
+          <article>
+            <h3>Settings updated by Admin</h3>
+            <p>Changed notification preferences</p>
+            <p>Today at 12:15</p>
+          </article>
+
+          <article>
+            <h3>Database backup completed</h3>
+            <p>Backup size: 2.5 GB</p>
+            <p>Today at 03:00</p>
+          </article>
+
+          <article>
+            <h3>New API key generated</h3>
+            <p>Generated for integration with third-party service</p>
+            <p>Yesterday at 16:45</p>
+          </article>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2025 Dashboard. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+      </footer>
+    </main>
+  </div>
+
+</body>
+</html>
